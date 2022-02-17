@@ -14,7 +14,7 @@ function getValue() {
     const rent = inputAmount('rent-tag');
     const clothes = inputAmount('clothes-tag');
     const totalExpense = document.getElementById('total-expense');
-    const balance = document.getElementById('Balance');
+    const balance = document.getElementById('balance');
     if (income >= totalExpense.innerText) {
         totalExpense.innerText = food + rent + clothes;
         if (totalExpense.innerText <= income) {
@@ -39,7 +39,7 @@ function savingAmount() {
     const income = inputAmount('income-tag');
     const percentValue = document.getElementById('input-percent');
     const percentAmount = parseInt(percentValue.value);
-    const balance = document.getElementById('Balance');
+    const balance = document.getElementById('balance');
     const balanceTotal = balance.innerText;
     const SavingsInput = document.getElementById('save-amount');
     if ((percentAmount > 0) && (percentAmount <= balanceTotal)) {
@@ -53,7 +53,7 @@ function savingAmount() {
 }
 function reaminingBalance() {
     // remaining balance 
-    const balance = document.getElementById('Balance');
+    const balance = document.getElementById('balance');
     const balanceTotal = balance.innerText;
     const savingAmount = document.getElementById('save-amount');
     const saving = parseInt(savingAmount.innerText);
