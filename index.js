@@ -1,7 +1,4 @@
-
-
-
-// input and expense function
+// input function
 function inputAmount(inputId) {
     const input = document.getElementById(inputId);
     const amount = parseInt(input.value);
@@ -10,12 +7,12 @@ function inputAmount(inputId) {
     }
 
 }
-// get value from input
+// value from input
 function getValue() {
-    const income = inputAmount('income-field');
-    const food = inputAmount('food-field');
-    const rent = inputAmount('rent-field');
-    const clothes = inputAmount('clothes-field');
+    const income = inputAmount('income-tag');
+    const food = inputAmount('food-tag');
+    const rent = inputAmount('rent-tag');
+    const clothes = inputAmount('clothes-tag');
     const totalExpense = document.getElementById('total-expense');
     const balance = document.getElementById('Balance');
     if (income >= totalExpense.innerText) {
@@ -27,19 +24,19 @@ function getValue() {
         else {
             totalExpense.innerText = 'Out of range';
             balance.innerText = income;
-            alert('not valid order with balance');
+            alert('not valid');
         }
 
     }
     else {
-        alert('Nedd more doller to expense');
+        alert('Nedd more expense');
     }
 
 }
 
-// save function saving amount
+// saving amount
 function savingAmount() {
-    const income = inputAmount('income-field');
+    const income = inputAmount('income-tag');
     const percentValue = document.getElementById('parcent-input');
     const percentAmount = parseInt(percentValue.value);
     const balance = document.getElementById('Balance');
@@ -50,7 +47,7 @@ function savingAmount() {
         SavingsInput.innerText = parseInt(savings);
     }
     else {
-        alert('Give proper percentage amount')
+        alert('Give perfect amount')
     }
 
 }
@@ -60,13 +57,13 @@ function reaminingBalance() {
     const balanceTotal = balance.innerText;
     const savingAmount = document.getElementById('saving-amount');
     const saving = parseInt(savingAmount.innerText);
-    let remainiBalance = document.getElementById('remaining-balance');
+    let remainigBalance = document.getElementById('remaining-balance');
     if (balanceTotal >= saving) {
-        remainiBalance.innerText = balanceTotal - saving;
+        remainigBalance.innerText = balanceTotal - saving;
     }
     else {
         savingAmount.innerText = 00;
-        alert('There is no money to save');
+        alert('No money to save');
     }
 }
 
