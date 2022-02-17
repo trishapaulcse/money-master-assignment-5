@@ -37,7 +37,7 @@ function getValue() {
 // saving amount
 function savingAmount() {
     const income = inputAmount('income-tag');
-    const percentValue = document.getElementById('parcent-input');
+    const percentValue = document.getElementById('input-percent');
     const percentAmount = parseInt(percentValue.value);
     const balance = document.getElementById('Balance');
     const balanceTotal = balance.innerText;
@@ -47,7 +47,7 @@ function savingAmount() {
         SavingsInput.innerText = parseInt(savings);
     }
     else {
-        alert('Give perfect amount')
+        alert('Need perfect amount')
     }
 
 }
