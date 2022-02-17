@@ -41,7 +41,7 @@ function savingAmount() {
     const percentAmount = parseInt(percentValue.value);
     const balance = document.getElementById('Balance');
     const balanceTotal = balance.innerText;
-    const SavingsInput = document.getElementById('saving-amount');
+    const SavingsInput = document.getElementById('save-amount');
     if ((percentAmount > 0) && (percentAmount <= balanceTotal)) {
         const savings = income * (percentAmount / 100);
         SavingsInput.innerText = parseInt(savings);
@@ -55,7 +55,7 @@ function reaminingBalance() {
     // remaining balance 
     const balance = document.getElementById('Balance');
     const balanceTotal = balance.innerText;
-    const savingAmount = document.getElementById('saving-amount');
+    const savingAmount = document.getElementById('save-amount');
     const saving = parseInt(savingAmount.innerText);
     let remainigBalance = document.getElementById('remaining-balance');
     if (balanceTotal >= saving) {
